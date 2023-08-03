@@ -3,6 +3,7 @@ import { ImageList, ImageListItem, ImageListItemBar, IconButton, Container } fro
 import ModalCert from './ModalCert';
 import data from '../../data/data.json';
 const datos = data;
+const urlImage = require.context('../../media/imgCertificates/', true);
 
 const TracksCert = () => {
   return (
@@ -10,7 +11,12 @@ const TracksCert = () => {
       <ImageList variant="masonry" cols={3} gap={'2.2rem'}>
         {datos.map((item) => (
           <ImageListItem key={item.img}>
-            <img src={`${item.img}`} srcSet={`${item.img}`} alt={item.title} loading="lazy" />
+            <img
+              src={urlImage(`./${item.img}.jpg`)}
+              srcSet={urlImage(`./${item.img}.jpg`)}
+              alt={item.title}
+              loading="lazy"
+            />
             <ImageListItemBar
               title={item.title}
               subtitle={item.author}

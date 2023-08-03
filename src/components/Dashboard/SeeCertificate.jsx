@@ -3,6 +3,8 @@ import { PictureAsPdf } from '@mui/icons-material';
 import data from '../../data/data.json';
 const datos = data;
 
+const urlImage = require.context('../../media/imgCertificates/', true);
+
 const SeeCertificate = (pronps) => {
   let item,
     existeItem = false;
@@ -24,8 +26,8 @@ const SeeCertificate = (pronps) => {
           <div>
             <img
               style={{ maxWidth: '100%', objectFit: 'cover' }}
-              src={item.img}
-              srcSet={item.img}
+              src={urlImage(`./${item.img}.jpg`)}
+              srcSet={urlImage(`./${item.img}.jpg`)}
               loading="lazy"
             />
             <Button

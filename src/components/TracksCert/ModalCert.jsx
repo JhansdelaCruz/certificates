@@ -23,6 +23,9 @@ const style = {
   width: 800,
   p: 3,
 };
+
+const urlImage = require.context('../../media/imgCertificates/', true);
+
 const ModalCert = (pronps) => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
@@ -44,7 +47,7 @@ const ModalCert = (pronps) => {
         <Card sx={style}>
           <CardMedia
             sx={{ height: 440 }}
-            image={pronps.item.img}
+            image={urlImage(`./${pronps.item.img}.jpg`)}
             title="Certificado"
             style={{ objectFit: 'cover', maxWidth: '100%' }}
           />
