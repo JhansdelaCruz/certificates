@@ -1,13 +1,18 @@
 import './App.css';
 import PgCertificate from './components/pages/PgCertificate';
 import PgHome from './components/pages/PgHome';
-import { createHashRouter, RouterProvider } from 'react-router-dom';
-const router = createHashRouter([
-  { path: '/', element: <PgHome /> },
-  { path: '/search/:id', element: <PgCertificate /> },
-]);
+import { HashRouter, Route, Routes } from 'react-router-dom';
+import ToolBar from './components/Dashboard/ToolBar';
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <HashRouter>
+      <ToolBar />
+      <Routes>
+        <Route path="/" element={<PgHome />} />
+        <Route path="/search/:id" element={<PgCertificate />} />
+      </Routes>
+    </HashRouter>
+  );
 }
 
 export default App;

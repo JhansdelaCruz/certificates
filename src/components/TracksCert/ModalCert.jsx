@@ -11,6 +11,7 @@ import {
   Stack,
 } from '@mui/material';
 import { Visibility, PictureAsPdf } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 
 const style = {
   position: 'absolute',
@@ -59,14 +60,11 @@ const ModalCert = (pronps) => {
             </Stack>
           </CardContent>
           <CardActions sx={{ flexDirection: 'row-reverse' }}>
-            <Button
-              href={`https://jhansdelacruz.github.io/certificates/#/search/${pronps.item.id}`}
-              size="small"
-              variant="outlined"
-              startIcon={<PictureAsPdf />}
-            >
-              Google Drive
-            </Button>
+            <Link to={`/search/${pronps.item.id}`}>
+              <Button size="small" variant="outlined" startIcon={<PictureAsPdf />}>
+                Google Drive
+              </Button>
+            </Link>
           </CardActions>
         </Card>
       </Modal>

@@ -40,7 +40,7 @@ const CertFilter = () => {
         <BottomNavigationAction style={styFilter} label="Marino" icon={<SailingOutlined />} />
         <BottomNavigationAction
           style={styFilter}
-          label="Personal"
+          label="Otros"
           icon={<WorkspacePremiumOutlined />}
         />
       </BottomNavigation>

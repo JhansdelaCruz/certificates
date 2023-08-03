@@ -1,6 +1,5 @@
-import { AppBar, Box } from '@mui/material';
+import { Box } from '@mui/material';
 import { useParams } from 'react-router-dom';
-import ToolBar from '../Dashboard/ToolBar';
 import SeeCertificate from '../Dashboard/SeeCertificate';
 
 const PgCertificate = () => {
@@ -8,9 +7,7 @@ const PgCertificate = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="sticky" sx={{ backgroundColor: 'Primary' }}>
-        <ToolBar />
-      </AppBar>
+      <Box minHeight={40}></Box>
       <SeeCertificate id={id}></SeeCertificate>
     </Box>
   );
