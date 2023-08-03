@@ -10,12 +10,7 @@ const TracksCert = () => {
       <ImageList variant="masonry" cols={3} gap={'2.2rem'}>
         {datos.map((item) => (
           <ImageListItem key={item.img}>
-            <img
-              src={`${item.img}?w=248&fit=crop&auto=format`}
-              srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-              alt={item.title}
-              loading="lazy"
-            />
+            <img src={`${item.img}`} srcSet={`${item.img}`} alt={item.title} loading="lazy" />
             <ImageListItemBar
               title={item.title}
               subtitle={item.author}

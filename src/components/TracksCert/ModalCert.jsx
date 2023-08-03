@@ -57,7 +57,7 @@ const ModalCert = (pronps) => {
           </CardContent>
           <CardActions sx={{ flexDirection: 'row-reverse' }}>
             <Button
-              href={`http://localhost:3000/#/search/${pronps.item.id}`}
+              href={`https://jhansdelacruz.github.io/certificates/#/search/${pronps.item.id}`}
               size="small"
               variant="outlined"
               startIcon={<PictureAsPdf />}
