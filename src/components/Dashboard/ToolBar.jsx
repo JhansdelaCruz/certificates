@@ -40,7 +40,11 @@ const ToolBar = () => {
         </Typography>
         <Box>
           <LightTooltip title="Ver todos los Certificados">
-            <IconButton edge="start" color="inherit" href="http://localhost:3000/">
+            <IconButton
+              edge="start"
+              color="inherit"
+              href="https://jhansdelacruz.github.io/certificates"
+            >
               <Avatar
                 alt="J-icon"
                 src={jFilled}
