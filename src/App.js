@@ -4,7 +4,7 @@ import PgHome from './components/pages/PgHome';
 import { createHashRouter, RouterProvider } from 'react-router-dom';
 const router = createHashRouter([
   { path: '/', element: <PgHome /> },
-  { path: '/search/:searchTerm', element: <PgCertificate /> },
+  { path: '/search/:id', element: <PgCertificate /> },
 ]);
 function App() {
   return <RouterProvider router={router} />;

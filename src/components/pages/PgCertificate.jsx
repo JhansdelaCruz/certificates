@@ -4,13 +4,14 @@ import ToolBar from '../Dashboard/ToolBar';
 import SeeCertificate from '../Dashboard/SeeCertificate';
 
 const PgCertificate = () => {
-  const { searchTerm } = useParams();
+  const { id } = useParams();
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="sticky" sx={{ backgroundColor: 'Primary' }}>
         <ToolBar />
       </AppBar>
-      <SeeCertificate id={searchTerm}></SeeCertificate>
+      <SeeCertificate id={id}></SeeCertificate>
     </Box>
   );
 };
