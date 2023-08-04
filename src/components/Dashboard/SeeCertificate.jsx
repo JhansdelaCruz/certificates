@@ -1,5 +1,5 @@
 import { Button, Container } from '@mui/material';
-import { PictureAsPdf } from '@mui/icons-material';
+import { OpenInNew } from '@mui/icons-material';
 import data from '../../data/data.json';
 const datos = data;
 
@@ -26,8 +26,8 @@ const SeeCertificate = (pronps) => {
           <div>
             <img
               style={{ maxWidth: '100%', objectFit: 'cover' }}
-              src={urlImage(`./${item.img}.jpg`)}
-              srcSet={urlImage(`./${item.img}.jpg`)}
+              src={urlImage(`./${item.img}`)}
+              srcSet={urlImage(`./${item.img}`)}
               loading="lazy"
             />
             <Button
@@ -35,7 +35,7 @@ const SeeCertificate = (pronps) => {
               href={item.pdf}
               size="small"
               variant="outlined"
-              startIcon={<PictureAsPdf />}
+              startIcon={<OpenInNew />}
             >
               Google Drive
             </Button>

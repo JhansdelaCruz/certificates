@@ -10,7 +10,7 @@ import {
   Modal,
   Stack,
 } from '@mui/material';
-import { Visibility, PictureAsPdf } from '@mui/icons-material';
+import { Visibility, ImageSearch } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 
 const style = {
@@ -25,7 +25,7 @@ const style = {
   p: 3,
 };
 
-const urlImage = require.context('../../media/imgCertificates/', true);
+const urlImage = require.context('../../media/imgCertificates/sm', true);
 
 const ModalCert = (pronps) => {
   const [open, setOpen] = React.useState(false);
@@ -48,7 +48,7 @@ const ModalCert = (pronps) => {
         <Card sx={style}>
           <CardMedia
             sx={{ height: 440 }}
-            image={urlImage(`./${pronps.item.img}.jpg`)}
+            image={urlImage(`./${pronps.item.img}`)}
             title="Certificado"
             style={{ objectFit: 'cover', maxWidth: '100%' }}
           />
@@ -61,9 +61,7 @@ const ModalCert = (pronps) => {
           </CardContent>
           <CardActions sx={{ flexDirection: 'row-reverse' }}>
             <Link to={`/search/${pronps.item.id}`}>
-              <Button size="small" variant="outlined" startIcon={<PictureAsPdf />}>
-                Google Drive
-              </Button>
+              <Button size="large" variant="contained" startIcon={<ImageSearch />}></Button>
             </Link>
           </CardActions>
         </Card>

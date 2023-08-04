@@ -3,7 +3,7 @@ import { ImageList, ImageListItem, ImageListItemBar, IconButton, Container } fro
 import ModalCert from './ModalCert';
 import data from '../../data/data.json';
 const datos = data;
-const urlImage = require.context('../../media/imgCertificates/', true);
+const urlImage = require.context('../../media/imgCertificates/sm/', true);
 
 const TracksCert = () => {
   return (
@@ -12,8 +12,8 @@ const TracksCert = () => {
         {datos.map((item) => (
           <ImageListItem key={item.img}>
             <img
-              src={urlImage(`./${item.img}.jpg`)}
-              srcSet={urlImage(`./${item.img}.jpg`)}
+              src={urlImage(`./${item.img}`)}
+              srcSet={urlImage(`./${item.img}`)}
               alt={item.title}
               loading="lazy"
             />

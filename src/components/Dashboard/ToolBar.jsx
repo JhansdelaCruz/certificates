@@ -27,7 +27,7 @@ const LightTooltip = styled(({ className, ...props }) => (
 
 const ToolBar = () => {
   return (
-    <AppBar position="fixed" sx={{ backgroundColor: 'transparent' }}>
+    <AppBar position="fixed" sx={{ backgroundColor: 'RGBA(0,0,0,0.3)' }}>
       <Container maxWidth="xl">
         <Toolbar>
           <Box size="large" color="inherit" sx={{ mr: 2 }}>
