@@ -37,7 +37,7 @@ const CertFilter = () => {
           icon={<IntegrationInstructionsOutlined />}
         />
         <BottomNavigationAction style={styFilter} label="Ingles" icon={<Translate />} />
-        <BottomNavigationAction style={styFilter} label="Marino" icon={<SailingOutlined />} />
+        <BottomNavigationAction style={styFilter} label="Marin" icon={<SailingOutlined />} />
         <BottomNavigationAction
           style={styFilter}
           label="Otros"

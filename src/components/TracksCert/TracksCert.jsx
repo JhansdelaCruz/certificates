@@ -3,7 +3,7 @@ import { ImageList, ImageListItem, ImageListItemBar, Container } from '@mui/mate
 import ModalCert from './ModalCert';
 import data from '../../data/data.json';
 const datos = data;
-const urlImage = require.context('../../media/imgCertificates/sm/', true);
+const urlImage = require.context('../../media/imgCertificates/xs/', true);
 
 const TracksCert = () => {
   return (
