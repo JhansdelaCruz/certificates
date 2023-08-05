@@ -34,8 +34,8 @@ const ModalCert = (pronps) => {
 
   return (
     <div>
-      <Fab onClick={handleOpen} edge="start" size="small" sx={{ backgroundColor: '#7532fa' }}>
-        <Visibility sx={{ fill: '#fcfcfc' }} />
+      <Fab onClick={handleOpen} edge="start" size="small" sx={{ backgroundColor: '#191B26' }}>
+        <Visibility sx={{ fill: '#FFBA08' }} />
       </Fab>
 
       <Modal

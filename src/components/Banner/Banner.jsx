@@ -30,11 +30,16 @@ const Banner = () => {
           display: 'grid',
         }}
       >
-        <Box sx={{ placeSelf: 'center' }} color={'#FFFFFF'}>
-          <Typography variant="h1" fontWeight={'600'} fontSize={'5rem'}>
+        <Box sx={{ placeSelf: 'center' }} color={'#FFFFFF'} maxWidth={'95%'}>
+          <Typography
+            variant="h1"
+            textAlign={'center'}
+            fontWeight={'600'}
+            sx={{ fontSize: { xs: '4.1rem', sm: '5rem' } }}
+          >
             CERTIFICADOS
           </Typography>
-          <Typography variant="p">
+          <Typography textAlign={'center'}>
             Hola! Soy Jhans, un desarrollador Jr con pasión por el desarrollo fullstack
           </Typography>
         </Box>
