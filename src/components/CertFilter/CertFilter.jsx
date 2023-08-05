@@ -9,7 +9,7 @@ import {
 } from '@mui/icons-material';
 let styFilter = {
   display: 'flex',
-  flexBasis: '86px',
+  flexBasis: '45px',
   maxWidth: '168px',
 };
 
@@ -23,7 +23,7 @@ const CertFilter = () => {
       alignItems={'center'}
     >
       <BottomNavigation
-        sx={{ gap: '1rem', flexWrap: 'wrap', display: 'flex', width: '80%' }}
+        sx={{ display: 'flex', width: '80%' }}
         showLabels
         value={value}
         onChange={(event, newValue) => {
