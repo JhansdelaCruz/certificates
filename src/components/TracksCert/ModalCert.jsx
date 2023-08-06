@@ -1,16 +1,6 @@
 import * as React from 'react';
-import {
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Chip,
-  Fab,
-  Modal,
-  Stack,
-} from '@mui/material';
-import { Visibility, ImageSearch } from '@mui/icons-material';
+import { Card, CardActions, CardContent, CardMedia, Chip, Fab, Modal, Stack } from '@mui/material';
+import { Visibility, Close, PageviewOutlined } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 
 const style = {
@@ -18,11 +8,12 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  bgcolor: 'background.paper',
-  border: '2px solid #fff',
-  boxShadow: 24,
-  width: 800,
-  p: 3,
+  bgcolor: '#EBF3F5',
+  border: '2px solid rgb(225,186,8)',
+  borderRadius: '10px',
+  boxShadow: '10px 10px 18px rgba(225,186,8,0.35)',
+  p: { xs: 2, sm: 3 },
+  width: { xs: '80%', sm: '70%', md: '60%', lg: 'auto' },
 };
 
 const urlImage = require.context('../../media/imgCertificates/sm', true);
@@ -47,22 +38,56 @@ const ModalCert = (pronps) => {
       >
         <Card sx={style}>
           <CardMedia
-            sx={{ height: 440 }}
+            component="img"
+            sx={{
+              maxHeight: '55vh',
+              borderWidth: '3px 3px 7px',
+              borderStyle: 'solid',
+              borderColor: '#FCFCFC',
+              backgroundColor: '#FCFCFC',
+            }}
             image={urlImage(`./${pronps.item.img}`)}
             title="Certificado"
-            style={{ objectFit: 'cover', maxWidth: '100%' }}
+            style={{ objectFit: 'scale-down', maxWidth: '100%' }}
           />
           <CardContent>
-            <Stack direction="row" spacing={1}>
+            <Stack
+              sx={{ paddingTop: '1rem' }}
+              direction="row"
+              flexWrap={'wrap'}
+              gap={'0.5rem'}
+              spacing={1}
+            >
               {pronps.item.skills.map((skills) => (
-                <Chip key={skills} label={skills} color="primary" />
+                <Chip key={skills} label={skills} color="primary" variant="outlined" />
               ))}
             </Stack>
           </CardContent>
-          <CardActions sx={{ flexDirection: 'row-reverse' }}>
+          <CardActions
+            sx={{
+              flexDirection: 'row-reverse',
+              gap: '1.5rem',
+              padding: '1rem 1.5rem 2rem 1.5rem',
+            }}
+          >
             <Link to={`/search/${pronps.item.id}`}>
-              <Button size="large" variant="contained" startIcon={<ImageSearch />}></Button>
+              <Fab
+                color="primary"
+                disableFocusRipple="true"
+                onClick={handleClose}
+                edge="start"
+                size="medium"
+                variant="extended"
+              >
+                <PageviewOutlined sx={{ mr: 1 }} />
+                Ver
+              </Fab>
             </Link>
+
+            <Fab color="error" onClick={handleClose} edge="start" size="medium" variant="extended">
+              <Close sx={{ mr: 0 }} />
+              Cerrar
+            </Fab>
           </CardActions>
         </Card>
       </Modal>

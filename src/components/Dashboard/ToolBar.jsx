@@ -27,13 +27,22 @@ const LightTooltip = styled(({ className, ...props }) => (
 
 const ToolBar = () => {
   return (
-    <AppBar position="sticky" sx={{ backgroundColor: 'rgba(25,27,38,1)' }}>
+    <AppBar
+      position="sticky"
+      sx={{ backgroundColor: 'rgba(25,27,38,1)', boxShadow: '3px 3px 8px rgba(225,186,8,0.3)' }}
+    >
       <Container maxWidth="xl">
         <Toolbar>
           <Box size="large" color="#FFBA08" sx={{ mr: 2 }}>
             <School />
           </Box>
-          <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1, display: 'block' }}>
+          <Typography
+            color={'#FCFCFC'}
+            variant="h6"
+            noWrap
+            component="div"
+            sx={{ flexGrow: 1, display: 'block' }}
+          >
             @Jhansdelacruz
           </Typography>
           <Box>

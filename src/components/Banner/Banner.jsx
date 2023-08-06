@@ -10,11 +10,18 @@ const Banner = () => {
         display: 'grid',
         maxWidth: '100%',
         overflow: 'hidden',
+        backgroundColor: '#191B26',
       }}
     >
       <Grid
         item
-        sx={{ gridRow: '1', gridColumn: '1 / 2', display: { xs: 'none', sm: 'none', md: 'block' } }}
+        sx={{
+          gridRow: '1',
+          gridColumn: '1 / 2',
+          display: { xs: 'none', sm: 'none', md: 'grid' },
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
       >
         <img src={imgmdBanner} alt="Banner" style={{ maxWidth: '100%', objectFit: 'cover' }} />
       </Grid>
@@ -32,10 +39,29 @@ const Banner = () => {
       </Grid>
       <Grid
         item
-        style={{ background: 'linear-gradient(0deg,rgba(25,27,38,0.45),rgba(25,27,38,0.6))' }}
+        style={{ background: 'linear-gradient(0deg,rgba(25,27,38,0.45),rgba(25,27,38,0.9))' }}
         sx={{
           gridRow: '1',
           gridColumn: '1 / 2',
+          display: { xs: 'block', sm: 'none' },
+        }}
+      ></Grid>
+      <Grid
+        item
+        style={{ background: 'linear-gradient(0deg,rgba(25,27,38,0.45),rgba(25,27,38,0.8))' }}
+        sx={{
+          gridRow: '1',
+          gridColumn: '1 / 2',
+          display: { xs: 'none', sm: 'block', md: 'none' },
+        }}
+      ></Grid>
+      <Grid
+        item
+        style={{ background: 'linear-gradient(0deg,rgba(25,27,38,0.45),rgba(25,27,38,0.7))' }}
+        sx={{
+          gridRow: '1',
+          gridColumn: '1 / 2',
+          display: { xs: 'none', md: 'block' },
         }}
       ></Grid>
 
@@ -52,12 +78,14 @@ const Banner = () => {
             variant="h1"
             textAlign={'center'}
             fontWeight={'600'}
+            color={'#FCFCFC'}
             sx={{ fontSize: { xs: '3rem', sm: '4rem', md: '5rem' }, paddingBottom: '1.1rem' }}
           >
             CERTIFICADOS
           </Typography>
           <Typography
             textAlign={'center'}
+            color={'#EBF3F5'}
             sx={{
               fontSize: { xs: '1.1rem', sm: '1.2rem', md: '1.3rem' },
               display: { xs: 'none', md: 'block' },
@@ -68,6 +96,7 @@ const Banner = () => {
           </Typography>
           <Typography
             textAlign={'center'}
+            color={'#EBF3F5'}
             sx={{
               fontSize: { xs: '1.1rem', sm: '1.2rem', md: '1.3rem' },
               display: { xs: 'block', md: 'none' },

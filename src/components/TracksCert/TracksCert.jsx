@@ -8,7 +8,7 @@ const urlImage = require.context('../../media/imgCertificates/xs/', true);
 const TracksCert = () => {
   return (
     <Container
-      sx={{ paddingLeft: { xs: '4rem', sm: '2rem' }, paddingRight: { xs: '3rem', sm: '2rem' } }}
+      sx={{ paddingLeft: { xs: '3rem', sm: '2rem' }, paddingRight: { xs: '3rem', sm: '2rem' } }}
     >
       <ImageList
         variant="masonry"
@@ -39,9 +39,10 @@ const TracksCert = () => {
             />
 
             <ImageListItemBar
+              color="#EBF3F5"
               title={item.title}
               subtitle={item.author}
-              sx={{ backgroundColor: 'rgba(25,27,38,0.8)' }}
+              sx={{ backgroundColor: 'rgba(25,27,38,0.8)', paddingRight: '12px' }}
               actionIcon={<ModalCert item={item}></ModalCert>}
             />
           </ImageListItem>

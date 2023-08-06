@@ -17,13 +17,20 @@ const CertFilter = () => {
   const [value, setValue] = React.useState(0);
   return (
     <Box
-      sx={{ paddingTop: '20px', paddingBottom: '50px' }}
+      sx={{ paddingBottom: '60px' }}
       display={'flex'}
       justifyContent={'center'}
       alignItems={'center'}
     >
       <BottomNavigation
-        sx={{ display: 'flex', width: '80%' }}
+        sx={{
+          paddingTop: '20px',
+          paddingBottom: '20px',
+          display: 'flex',
+          width: '100%',
+          backgroundColor: '#FCFCFC',
+          boxShadow: '1px 1px 30px rgba(25,27,38,0.2)',
+        }}
         showLabels
         value={value}
         onChange={(event, newValue) => {
